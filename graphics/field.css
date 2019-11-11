@@ -1,0 +1,32 @@
+.card {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 50px;
+
+}
+
+.symbol {
+  visibility: visible;  
+}
+
+.title {
+    text-align: center;
+}
+
+#field {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 700px;
+    margin: 0 auto;
+}
+
+
+.symbol {
+    text-align: center;
+    margin-top: 80px;
+    color: white;
+}

@@ -37,12 +37,13 @@ export class Build {
 
 
     draw() {
-        
+        this.checkNumberOfCards(this.numberOfCards);
+        this.sendNumberOfCardsToLogic();
         let field = document.getElementById("field");
 
         console.log(this.numberOfCards);
 
-        this.sendNumberOfCardsToLogic();
+       
 
         for (let index = 0; index < this.numberOfCards; index++) {
             let card = document.createElement("div");

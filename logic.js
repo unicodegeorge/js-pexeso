@@ -35,13 +35,17 @@ export class Logic {
        
     }
 
+    //select cards
+
     select(card) {
 
 
         if (this.cardsPicked[0] == undefined) {
+            
 
             this.cardsLeft--;
             this.cardsPicked.push(card);
+            this.cardsPicked[0].getElementsByClassName("symbol").item(0).style="visibility: visible";
 
         }
 
@@ -52,6 +56,7 @@ export class Logic {
                 this.cardsPicked.push(card);
                 
                 this.cardsLeft--;
+                this.cardsPicked[1].getElementsByClassName("symbol").item(0).style="visibility: visible";
 
             } else {
                 console.log("invalid move");
@@ -69,6 +74,7 @@ export class Logic {
 
     }
 
+    //get symbols from selected cards
 
     getSelectedCardsSymbols(card1, card2) {
         let symbol1 = card1.getElementsByClassName("symbol").item(0);
@@ -86,15 +92,30 @@ export class Logic {
     _checkSymbols(cardSym1, cardSym2) {
         if (cardSym1.innerText == cardSym2.innerText) {
             this.cardFound.push("x", "c");
-            this.cardsPicked[0].style = "visibility: hidden";
-            this.cardsPicked[1].style = "visibility: hidden";
+            setTimeout(()=>{
+                this.cardsPicked[0].style = "visibility: hidden";
+                this.cardsPicked[1].style = "visibility: hidden";
+            },600);
+          
            
             
-            this.cardsPicked.length = 0;
-            this.checkWin();
+            setTimeout(()=>{
+                this.cardsPicked.length = 0;
+                this.checkWin();
 
+            },600);
+         
         } else {
-            this.cardsPicked.length = 0;
+            setTimeout(()=>{
+                this.cardsPicked[1].getElementsByClassName("symbol").item(0).style="visibility: hidden";
+                this.cardsPicked[0].getElementsByClassName("symbol").item(0).style="visibility: hidden";
+            },600);
+            
+            setTimeout(()=>{
+                this.cardsPicked.length = 0;
+               
+
+            },600);
         }
     }
 

@@ -45,6 +45,7 @@ export class Logic {
 
             this.cardsLeft--;
             this.cardsPicked.push(card);
+            this.cardsPicked[0].className="card selected";
             this.cardsPicked[0].getElementsByClassName("symbol").item(0).style="visibility: visible";
 
         }
@@ -54,7 +55,7 @@ export class Logic {
 
             if (card != this.cardsPicked[0]) {
                 this.cardsPicked.push(card);
-                
+                this.cardsPicked[1].className="card selected";
                 this.cardsLeft--;
                 this.cardsPicked[1].getElementsByClassName("symbol").item(0).style="visibility: visible";
 
@@ -109,6 +110,8 @@ export class Logic {
             setTimeout(()=>{
                 this.cardsPicked[1].getElementsByClassName("symbol").item(0).style="visibility: hidden";
                 this.cardsPicked[0].getElementsByClassName("symbol").item(0).style="visibility: hidden";
+                this.cardsPicked[0].className="card";
+                this.cardsPicked[1].className="card";
             },600);
             
             setTimeout(()=>{

@@ -10,8 +10,6 @@
     border-block-start: 10px solid rgb(11, 184, 112);;
 }
 
-
-
 .title {
     text-align: center;
 }
@@ -33,5 +31,7 @@
 }
 
 .selected {
-    
+    background-color: black;
+    color: black;
 }
+

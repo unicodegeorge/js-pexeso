@@ -1,16 +1,16 @@
 .card {
     width: 200px;
     height: 200px;
-    background-color: lightblue;
+    background-color: rgb(22, 54, 122);
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 50px;
-
+    
+    border-block-end: 5px solid rgb(11, 184, 112);
+    border-block-start: 10px solid rgb(11, 184, 112);;
 }
 
-.symbol {
-  visibility: visible;  
-}
+
 
 .title {
     text-align: center;
@@ -29,4 +29,8 @@
     text-align: center;
     margin-top: 80px;
     color: white;
+}
+
+.selected {
+    
 }

@@ -5,12 +5,14 @@
         .then((module) => {
             console.log("test");
             const Build = module.Build;
-            let test = new Build();
-            test.draw();
+            
            
             const game = new Build(6,"red",1);
+            game.checkNumberOfCards(game.numberOfCards);
             game.draw();
             game.setSymbols();
+            
+            
             
         });
 

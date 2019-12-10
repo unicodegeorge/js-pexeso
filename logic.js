@@ -46,6 +46,8 @@ export class Logic {
 
     }
 
+    
+
     //select cards
     select(card) {
 
@@ -140,7 +142,7 @@ export class Logic {
             setTimeout(() => {
 
                 //reset cardsPicked array
-                this.cardsPicked.length = 0;
+                this.cardsPicked = [];
 
                 //calls function checkWin
                 this.checkWin();
@@ -156,9 +158,9 @@ export class Logic {
                 this.cardsPicked[0].getElementsByClassName("symbol").item(0).style = "visibility: hidden";
 
 
-                //set className of first card to "card"
+                //set className of the first card to "card"
                 this.cardsPicked[0].className = "card";
-                //set className of second card to "card"
+                //set className of the second card to "card"
                 this.cardsPicked[1].className = "card";
             }, 600);
 
@@ -166,7 +168,7 @@ export class Logic {
             setTimeout(() => {
 
                 //reset cardsPicked array
-                this.cardsPicked.length = 0;
+                this.cardsPicked = [];
 
 
             }, 600);

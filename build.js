@@ -2,10 +2,10 @@
 import { Logic } from "./logic.js";
 export class Build {
 
-    constructor(numberOfCards, color, typeOfCards) {
+    constructor(numberOfCards, color) {
         this.numberOfCards = numberOfCards;
         this.color = color;
-        this.typeOfCards = typeOfCards;
+ 
         this.logic = new Logic;
         this.pole = [];
         this.field = document.getElementById("field");
@@ -66,6 +66,7 @@ export class Build {
             //set className of a card to "card"
             card.className = "card";
 
+            card.style = "background-color: "+this.color;
             //adds card to div called "field"
             this.field.appendChild(card);
 
